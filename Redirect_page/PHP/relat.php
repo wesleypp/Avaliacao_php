@@ -147,26 +147,24 @@
                             @$id = utf8_encode($registro["idprod"]);
                             @$nome = utf8_encode($registro["nome"]);
                             @$cor = utf8_encode($registro["cor"]);
-                            @$preco = number_format(substr_replace(limpar_texto($registro["preco"]), ',', -2, 0), 2, ",", ".");
+                            @$prec = $registro["preco"];
+                            @$preco = number_format($registro["preco"], 2, ",", ".");
 
                             if ((($cor == "VERMELHO") && ((substr_replace(limpar_texto($registro["preco"]), '.', -2, 0)) <= 50.00)) || ($cor == "AZUL")) {
                                 $desconto = "20%";
                                 $desc = 0.20;
-                                $prec = substr_replace(limpar_texto($registro["preco"]), '.', -2, 0);
-                                $valor = ($prec) - (($prec) * ($desc));
-                                @$valor = number_format(substr_replace($valor, ',', -2, 0), 2, ",", ".");
+                                $valor1 = ($prec)-(($prec) *($desc));
+                                @$valor = number_format($valor1, 2, ",", ".");
                             } elseif ($cor == "AMARELO") {
                                 $desconto = "10%";
                                 $desc = 0.10;
-                                $prec = substr_replace(limpar_texto($registro["preco"]), '.', -2, 0);
-                                $valor = ($prec) - (($prec) * ($desc));
-                                @$valor = number_format(substr_replace($valor, ',', -2, 0), 2, ",", ".");
+                                $valor1 = ($prec)-(($prec) *($desc));
+                                @$valor = number_format($valor1, 2, ",", ".");
                             } elseif (($cor == "VERMELHO") && ((substr_replace(limpar_texto($registro["preco"]), '.', -2, 0)) > 50.00)) {
                                 $desconto = "5%";
                                 $desc = 0.05;
-                                $prec = substr_replace(limpar_texto($registro["preco"]), '.', -2, 0);
-                                $valor = ($prec) - (($prec) * ($desc));
-                                @$valor = number_format(substr_replace($valor, ',', -2, 0), 2, ",", ".");
+                                $valor1 = ($prec)-(($prec) *($desc));
+                                @$valor = number_format($valor1, 2, ",", ".");
                             }
 
                             echo "<tbody><tr scope='row'><td>$id</td><td>$nome</td><td>$cor</td><td>R$ $preco</td><td>$desconto</td><td>R$ $valor</td><td scope='col'><a href='alterar.php?id=$id'><i type='button'style='witdh:10%;' class='btn btn-primary'>Editar</i></a></td><td scope='col'><a href='excluir.php?id=$id'><i class='btn btn-danger'>Excluir</i></a></td></tr></tbody>";

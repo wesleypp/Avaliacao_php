@@ -1,0 +1,33 @@
+body{
+margin-top:10%;    
+}
+.collection .collection-item{
+line-height:1.0rem;
+}
+#font{
+text-align:center;
+font-size:150%; 
+text-transform:uppercase;
+color:black; 
+}
+legend{
+font-size:125%; 
+color:black; 
+}
+.submit-btn{
+width:25%;
+padding:10px 30px;
+cursor:pointer;
+display:block;
+margin:8px auto;
+background: linear-gradient(to bottom left, #ffffff 0%, #66ff99 100%);
+border:0;
+outline:none;
+border-radius:30px; 
+}
+label{
+color: black;
+}
+fieldset{
+border-color:black; 
+}

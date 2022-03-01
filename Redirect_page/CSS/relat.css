@@ -1,0 +1,56 @@
+label {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+input {
+    min-width: 20rem;
+}
+
+table {
+    top: 0;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    table-layout: auto;
+}
+
+table,
+tr,
+td {
+    top: 0;
+    padding: 10px;
+    color: black;
+    border: 2px solid black;
+    border-collapse: separate;
+    font-size: 12px;
+    font-family: arial;
+    margin-left:-13vh;
+    background-color: whitesmoke;
+}
+
+body {
+    height: auto;
+    width: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./../Images/904747.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#body {
+    text-align: center;
+    margin: 5% auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20%;
+    position: center;
+    clear: both;
+}
+@media (max-width: 667px) {
+ table,tr,td {
+     margin-left:auto;
+}
+}

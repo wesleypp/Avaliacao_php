@@ -1,0 +1,123 @@
+body {
+    background: url(./../Images/1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.marge {
+    margin-top: 7.5%;
+    margin-bottom: auto;
+}
+
+#header {
+    align-self: center;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+    font: arial;
+    margin-top: -1%;
+    margin-bottom: -5%;
+    text-transform: uppercase;
+}
+
+#body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70%;
+}
+
+ul li ul li {
+    margin: 0;
+    display: none;
+    text-transform: uppercase;
+}
+
+ul li:hover ul li {
+    display: block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    border-radius: 20%;
+}
+
+ul li a:hover {
+    background: linear-gradient(45deg, #ffffff, #000000);
+    transition: 3s;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    float: left;
+    height: 30px;
+    width: 125px;
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+ul li {
+    margin: 5px 15px 15px 35px;
+    float: left;
+    height: 30px;
+    width: 125px;
+    background: linear-gradient(45deg, #99989b, #252525);
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+#foo {
+    overflow: auto;
+    margin: auto;
+    height: 8%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+@media screen and (min-width: 0px) and (max-width: 250px) and (min-height: 0px)and (max-height:250px) {
+    .marge {
+        margin-left: 9%;
+    }
+}
+
+@media screen and (min-width: 251px) and (max-width: 500px) and (min-height: 251px)and (max-height:500px) {
+    .marge {
+        margin-left: 11%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1000px) and (min-height: 501px)and (max-height:1000px) {
+    .marge {
+        margin-left: 13.5%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .marge {
+        margin-left: auto;
+    }
+}
